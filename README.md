@@ -129,26 +129,24 @@
 
 # 常用启动参数
 ```
-golin web (通过web方式启动,仅支持等保功能)
-golin port (自动读取本地网卡IP地址段进行扫描,过滤虚拟网卡地址段)
-golin port -i 192.168.1.1/24 (扫描c段端口并扫描弱口令、xss、poc漏洞)
-golin port -i 192.168.1.1/24 --ipfile ip.txt (扫描指定IP段的同时扫描ip.txt文件中的主机,默认读取ip.txt,目录下如果存在不使用--ipfile也会读取)
-golin port --fofa 'app="nps" && port="8080"' (调用fofa数据进行扫描)
-golin port -i 192.168.1.1:8080 (快速扫描某一主机的特定端口)
-golin port -i http://www.test.com:18080 (扫描网站首页)
-golin port -i http://www.test.com:18080/info (扫描网站特定页)
-golin port -i 192.168.1.1/24 -c 1000 -t 10(仅扫描c段端口并设置并发数为1000,端口连接超时为10秒)
-golin port -i 192.168.1.1/24 --noping --nocrack --random(扫描c段端口但不探测存活不扫描弱口令,并且打乱主机顺序扫描)
-golin port -i 192.168.1.1/24 --noimg(不进行网站截图)
-golin port -i 192.168.1.1/24 --nopoc(扫描c段端口但禁用扫描漏洞)
-golin dirsearch -u https://tegitst.com -f 字典.txt --code 200,404 (扫描状态码为200以及404的web目录)
-golin [linux、mysql、oracle、sqlserver、redis、windows...] (按照3级等保要求核查各项安全配置生成html形式报告)
-golin update (检查是否可更新)
-golin keylogger (键盘记录器,仅windows可用,保存到用户目录下Golin/dump.txt)
+vluutils web (通过web方式启动,仅支持等保功能)
+vluutils port (自动读取本地网卡IP地址段进行扫描,过滤虚拟网卡地址段)
+vluutils port -i 192.168.1.1/24 (扫描c段端口并扫描弱口令、xss、poc漏洞)
+vluutils port -i 192.168.1.1/24 --ipfile ip.txt (扫描指定IP段的同时扫描ip.txt文件中的主机,默认读取ip.txt,目录下如果存在不使用--ipfile也会读取)
+vluutils port --fofa 'app="nps" && port="8080"' (调用fofa数据进行扫描)
+vluutils port -i 192.168.1.1:8080 (快速扫描某一主机的特定端口)
+vluutils port -i http://www.test.com:18080 (扫描网站首页)
+vluutils port -i http://www.test.com:18080/info (扫描网站特定页)
+vluutils port -i 192.168.1.1/24 -c 1000 -t 10(仅扫描c段端口并设置并发数为1000,端口连接超时为10秒)
+vluutils port -i 192.168.1.1/24 --noping --nocrack --random(扫描c段端口但不探测存活不扫描弱口令,并且打乱主机顺序扫描)
+vluutils port -i 192.168.1.1/24 --noimg(不进行网站截图)
+vluutils port -i 192.168.1.1/24 --nopoc(扫描c段端口但禁用扫描漏洞)
+vluutils dirsearch -u https://tegitst.com -f 字典.txt --code 200,404 (扫描状态码为200以及404的web目录)
+vluutils [linux、mysql、oracle、sqlserver、redis、windows...] (按照3级等保要求核查各项安全配置生成html形式报告)
+vluutils update (检查是否可更新)
+vluutils keylogger (键盘记录器,仅windows可用,保存到用户目录下vluutils/dump.txt)
 ```
 
-# Star Chart
-[![Stargazers over time](https://starchart.cc/selinuxG/Golin.svg)](https://starchart.cc/selinuxG/Golin)
 
 # 免责声明
 本工具仅面向合法授权的企业安全建设行为，如您需要测试本工具的可用性，请自行搭建靶机环境。
@@ -157,6 +155,3 @@ golin keylogger (键盘记录器,仅windows可用,保存到用户目录下Golin/
 
 如您在使用本工具的过程中存在任何非法行为，您需自行承担相应一切后果。
 
-# 请作者喝杯咖啡
-非常感谢大家使用 Golin, 目前该项目由个人用业余时间在维护，如果本项目有帮助到你的话，可以考虑请作者喝杯咖啡~
-![vx](images/vx.jpg)
